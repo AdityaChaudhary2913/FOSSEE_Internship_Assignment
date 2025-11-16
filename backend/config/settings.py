@@ -15,7 +15,7 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-development-key-chang
 DEBUG = config('DEBUG', default=True, cast=bool)
 ALLOWED_HOSTS = config(
     'ALLOWED_HOSTS', 
-    default='localhost,127.0.0.1,' + os.environ.get('RENDER_EXTERNAL_HOSTNAME', ''), 
+    default='localhost,127.0.0.1,' + os.environ.get('https://fossee-internship-assignment.onrender.com', ''), 
     cast=lambda v: [s.strip() for s in v.split(',')]
 )
 

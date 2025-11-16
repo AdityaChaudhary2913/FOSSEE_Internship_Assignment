@@ -26,7 +26,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     # Admin interface
-    path('admin/', admin.site.admin_urls),
+    path('admin/', admin.site.urls),
     
     # API routes
     path('api/', include('equipment.urls')),

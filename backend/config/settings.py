@@ -125,12 +125,13 @@ REST_FRAMEWORK = {
 }
 
 # CORS settings
-CORS_ALLOWED_ORIGINS = config(
-    'CORS_ALLOWED_ORIGINS',
-    default='http://localhost:3000,http://127.0.0.1:3000',
-    cast=lambda v: [s.strip() for s in v.split(',')]
-)
+CORS_ALLOWED_ORIGINS = [
+    'https://fossee-internship-assignment-i9dc.vercel.app',  # your frontend
+    'http://localhost:3000',
+    'http://127.0.0.1:3000'
+]
 CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = False
 
 # Swagger settings
 SWAGGER_SETTINGS = {
